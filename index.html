@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lecomte Montage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <div class="parts part1">
+        <div class="textContainers textContainer1">
+          <h1 class="title1">Lecomte Montage <br> Charpente Métallique</h1>
+          <p class="text">
+            Des travailleurs appliqués pour un travail de qualité <br><br>
+          </p>
+          <div class="sumContainer">
+            <details>
+              <summary class="text sum">CONTACT</summary>
+              <div class="infoContainer">
+                <a href="tel:+33633265720"><img src="call.svg" class="logo" alt="Phone logo"></a>
+                <a href="tel:+33633265720"><p>06 33 26 57 20</p></a>
+              </div>
+              <div class="infoContainer">
+                <a href="mailto:ludlecomte@wanadoo.fr"><img src="email.svg" class="logo" alt="Mail logo"></a>
+                <a href="mailto:ludlecomte@wanadoo.fr"><p>ludlecomte@wanadoo.fr</p></a>
+              </div>
+            </details>
+          </div>
+        </div>
+        <img src="img_ludo.jpg" alt="image de Mr lecomte" id="profilepic">
+        <!-- <img src="bgc.svg" alt="image de fond d'écran"> -->
+      </div>
+      <div class="parts partreversed">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <div class="slideshow">
+
+             <!-- Full-width images with number and caption text -->
+             <div class="slides fade">
+               <img src="bat5.jpg" style="width:100%">
+             </div>
+
+             <div class="slides fade">
+               <img src="bat2.jpg" style="width:100%">
+             </div>
+
+             <div class="slides fade">
+               <img src="bat3.jpg" style="width:100%">
+             </div>
+
+             <div class="slides fade">
+               <img src="bat1.jpg" style="width:100%">
+             </div>
+
+             <!-- Next and previous buttons -->
+             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+           <span class="dot" onclick="currentSlide(1)"></span>
+           <span class="dot" onclick="currentSlide(2)"></span>
+           <span class="dot" onclick="currentSlide(3)"></span>
+           <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+          <script type="text/javascript">
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+              let i;
+              const slides = document.getElementsByClassName("slides");
+              const dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+          </script>
+        </div>
+        <div class="textContainers">
+          <h2 class="titlerev">Notre Entreprise</h2>
+          <p class="text textrev">
+            Cela fait presque 20 ans que nous sous-traitons des montages de charpente métallique, principalement industrielles et agricoles. Afin de travailler en sécurité et d'assurer un travail de qualité dans de courts délais, nous utilisons un manitou et une nacelle dans la majorité de nos chantiers.
+          </p>
+        </div>
+      </div>
+      <div class="parts">
+        <div class="textContainers">
+          <h2>Informations complémentaires</h2>
+          <p class="text">
+            Ancien ébéniste, Ludovic Lecomte crée son entreprise en 2006 et commence à travailler dans le secteur du Grand Est. En plus de l'ossature des bâtiments, il réalise la couverture et le bardage de ceux-ci.
+          </p>
+        </div>
+        <img src="workers.svg" id="img_roof"alt="">
+      </div>
+      <footer class="foot">
+        <p class="legal_mentions">
+          @2021 - <a href="legal.html">Mentions légales</a> - <a href="legal.html">Vie privée</a> - <a href="legal.html">Cookies</a> - Réalisé par Maël Kehl
+        </p>
+      </footer>
+    </section>
+    </footer>
+  </body>
+</html>
