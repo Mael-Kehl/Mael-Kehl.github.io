@@ -268,9 +268,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
     flex-direction: column-reverse;
   }
 
-  h1, h2, .text, .titlerev, .textrev{
-    margin: 0 0 0 0;
+  h1, h2, .text{
+    margin: 0;
     width: 100%;
+  }
+
+  .titlerev, .textrev{
+    margin: 0;
   }
 
   h1{
