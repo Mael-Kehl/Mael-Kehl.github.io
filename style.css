@@ -266,20 +266,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
     flex-direction: column-reverse;
   }
 
-  h1{
+  h1,h2,text, .titlerev, .textrev{
     margin: 0;
     width: 100%;
+  }
+
+  h1, h2{
+    text-decoration: underline;
+    text-decoration-color : var(--yellow);
+    -webkit-text-decoration-color : var(--yellow);
+  }
+
+  h1{
     font-size: 72px;
   }
   h2{
-    margin: 0;
-    width: 100%;
     font-size: 70px;
     margin-bottom: 5%;
   }
   .text{
-    margin: 0;
-    width: 100%;
     font-size: 40px;
     margin-bottom: 5%;
   }
@@ -364,7 +369,7 @@ and (-webkit-min-device-pixel-ratio: 2){
   .slideshow{
     width: 350px;
   }
-  .text{
+  {
     font-size: 20px;
     width: 402px;
   }
