@@ -306,15 +306,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   /*Font-size*/
 
-  #profilepic{
+  #profilepic, #profilepic:hover{
     width: 60vw;
     height: auto;
+    border: 10px solid var(--yellow);
   }
 /* = disable all hover effects on phone */
-  #profilepic:hover{
-    border: 10px solid var(--yellow);
-    width: 60vw;
-  }
+
 
   .slideshow-container{
     margin: 0;
