@@ -30,16 +30,10 @@ body{
   background-color: var(--bg-grey);
 }
 
-.textContainer1{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: top;
-}
-
 .partreversed{
   background-color: var(--bg-white);
 }
+
 .text{
   color: var(--text-color);
   width: 672px;
@@ -51,15 +45,15 @@ body{
 h1, h2{
   color: var(--text-color);
   border-bottom: solid 4px var(--yellow);
+  padding-bottom: 2px;
 }
 
 h2{
   width: 682px;
   font-size: 35px;
-  padding-bottom: 2px;
   margin: 0 0 30px 0;
 }
-
+/*We divise the h1 in two parts because of a safari bug with text-decoration: underline solid 4px var(--yellow);*/
 h1{
   width: 450px;
   font-size: 50px;
@@ -123,14 +117,8 @@ details[open] summary ~ * {
 
 .infoContainer{
   display: flex;
-  justify-content: flex-start;
-  margin-left: 50px;
-  margin-top: 5px;
-}
-
-a{
-  text-decoration: underline solid 2px var(--yellow);
-  -webkit-text-decoration: underline solid 4px var(--yellow);
+  flex-direction: column;
+  margin: 20px 0 0 0;
 }
 
 a>p{
@@ -198,19 +186,15 @@ img{
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -227,7 +211,6 @@ img{
   background-color: var(--yellow); /*#717171*/
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -260,6 +243,7 @@ footer{
 @media only screen
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
+
   .parts{
     height: 1200px;
     flex-direction: column;
@@ -291,7 +275,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   h2, .titlerev{
-    font-size: 52px;
+    font-size: 62px;
     margin: 0 0 30px 0;
     width: 100%;
   }
@@ -299,6 +283,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
     font-size: 40px;
     margin-bottom: 5%;
   }
+  /*
   .sumContainer{
     height: 250px;
   }
@@ -308,10 +293,15 @@ and (-webkit-min-device-pixel-ratio: 2) {
     height: 60px;
     border: solid 4px var(--text-color);
   }
+  */
 
   .logo{
     width: 55px;
     height: auto;
+  }
+
+  a>p{
+    font-size: 40px;
   }
 
   /*Font-size*/
@@ -319,6 +309,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
   #profilepic{
     width: 60vw;
     height: auto;
+  }
+/* = disable all hover effects on phone */
+  #profilepic:hover{
+    border: 10px solid var(--yellow);
+    width: 60vw;
   }
 
   .slideshow-container{
@@ -329,27 +324,17 @@ and (-webkit-min-device-pixel-ratio: 2) {
     max-width: 100%;
   }
 
-  .prev, .next {
-    padding: 16px;
-    color: var(--text-color);
-    font-weight: bold;
-    font-size: 40px;
-  }
-
   .dot{
     height: 20px;
     width: 20px;
   }
 
-
   #img_roof{
     width: 100%;
-    height: auto;
-    margin: 0;
   }
 
-.legal_mentions{
-    font-size: 26px;
+  .legal_mentions{
+    font-size: 28px;
   }
 }
 
