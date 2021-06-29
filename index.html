@@ -46,7 +46,7 @@
       </div>
       <div class="parts partreversed">
         <!-- Slideshow container -->
-        <div class="slideshow-container">
+        <div class="slideshow-container" ontouchmove='swipe(event)'>
           <div class="slideshow">
 
              <!-- Full-width images with number and caption text -->
@@ -82,6 +82,23 @@
           <script type="text/javascript">
             let slideIndex = 1;
             showSlides(slideIndex);
+
+            //Touch on phone
+            function swipe(event){
+              let touch = event.targetTouches[0];
+              let px = touch.pageX;
+              console.log(px);
+
+              let midpoint = Math.floor(screen.width/2);
+              console.log("midpoint :" + midpoint);
+
+              if(px > midpoint){
+                plusSlides(-1);
+              }else{
+                plusSlides(1);
+              }
+
+            }
 
             // Next/previous controls
             function plusSlides(n) {
