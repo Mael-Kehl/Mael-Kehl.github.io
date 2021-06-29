@@ -86,22 +86,6 @@
             let slideIndex = 1;
             showSlides(slideIndex);
 
-            //Touch on phone
-            /*function swipe(event){
-              let touch = event.targetTouches[0];
-              let px = touch.pageX;
-              console.log(px);
-
-              let midpoint = Math.floor(screen.width/2);
-              console.log("midpoint :" + midpoint);
-
-              if(px > midpoint){
-                plusSlides(-1);
-              }else{
-                plusSlides(1);
-              }
-            }*/
-
             let startingX, movingX;
             function touchstart(event){
               startingX = event.touches[0].clientX;
