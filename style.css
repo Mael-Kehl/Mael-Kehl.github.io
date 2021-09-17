@@ -241,7 +241,8 @@ footer{
 }
 
 @media only screen
-and (max-device-width: 600px)
+and (max-device-width: 700px)
+and (min-device-width: 200px)
 and (-webkit-min-device-pixel-ratio: 2) {
 
   .parts{
@@ -337,8 +338,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 @media only screen
-and (min-device-width: 600px)
-and (max-device-width: 900px)
+and (min-device-width: 700px)
+and (max-device-width: 1000px)
 and (-webkit-min-device-pixel-ratio: 2){
 
   body{
@@ -346,7 +347,7 @@ and (-webkit-min-device-pixel-ratio: 2){
   }
   .parts{
     padding: 50px;
-    height: 350px;
+    height: 500px;
   }
   h2{
     font-size: 28px;
@@ -359,9 +360,9 @@ and (-webkit-min-device-pixel-ratio: 2){
   .slideshow{
     width: 350px;
   }
-  {
+  .text{
     font-size: 20px;
-    width: 402px;
+    width: 400px;
   }
   .sum{
     width: 150px;
@@ -385,7 +386,7 @@ and (-webkit-min-device-pixel-ratio: 2){
 
 
 @media only screen
-and (min-device-width: 900px)
+and (min-device-width: 1000px)
 and (max-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
